@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Register:</h1>
+<form method="POST">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" name="username" required><br> <br>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" required><br> <br>
+
+    <label for="password1">Password:</label>
+    <input type="password1" name="password1" required><br> <br>
+
+    <label for="password2">Password:</label>
+    <input type="password2" name="password2" required><br> <br>
+
+    <button type="submit">Register</button>
+</form>
+
+{% endblock %}
+</body>
+</html>
